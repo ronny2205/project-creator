@@ -1,2 +1,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  background-color: #5c6bc0;
+}
+
+.panel-body {
+  padding: 30px;
+}
+
+.voffset1 {
+  margin-top: 15px; 
+}
+
+.voffset2 {
+  margin-top: 30px; 
+}
+
+#title {
+  margin-top: -8px;
+}
