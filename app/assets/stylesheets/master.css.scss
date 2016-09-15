@@ -2,7 +2,7 @@
 @import "bootstrap";
 
 body {
-  background-color: #5c6bc0;
+  background-color: #aed581;
 }
 
 .panel-body {
@@ -21,16 +21,17 @@ body {
   margin-top: -8px;
 }
 
-.field_with_errors1{
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
 
 .field_with_errors {
-  color: #ff3333;
-  background-color: #FFEEEE;
-  border-radius: 3px;
-  padding: 8px;
+  color: #bf360c;
+  font-size: 12px;
+  margin-bottom: -30px;
+}
 
+.error {
+  line-height: 180%;
+}
+
+.form-group {
+  margin-bottom: 25px;
 }
