@@ -4,8 +4,12 @@ class CustomersController < ApplicationController
   end  
 
   def create
-    Customer.create(customer_params)
-    redirect_to root_path
+    @customer = Customer.create(customer_params)
+    if @customer.valid?
+        redirect_to root_path
+    else
+        render :new, :status => :unprocessable_entity
+    end
   end
 
   private
