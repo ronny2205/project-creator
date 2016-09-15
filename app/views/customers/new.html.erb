@@ -1,1 +1,52 @@
-lalala
+
+  <div class="container">
+
+    <div class="row voffset2">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h1>Start Your Free Demo</h1>
+              
+                <%= simple_form_for @customer do |f| %>
+                  <h4 class="voffset1"> Name </h4>
+                  <div class="row">
+                    <div class="form-group col-xs-6">
+                      <%= f.input :first_name, placeholder: 'First Name', label: false, error: 'Name is mandatory, please specify one'%>
+                    </div>
+                    <div class="form-group col-xs-6">
+                      <%= f.input :last_name, placeholder: 'Last Name', label: false %>
+                    </div>
+                  </div>  
+
+                  <h4> Account </h4>
+                  <div class="row">
+                    <div class="form-group col-xs-8">
+                      <%= f.input :email, placeholder: 'Email', label: false %>
+                    </div>
+                    <div class="form-group col-xs-4">    
+                      <%= f.input :password, placeholder: 'Password (Hidden)', label: false %>
+                    </div>
+                  </div>  
+
+                  <h4> Project Information </h4>
+                  <div class="row">
+                    <div class="form-group col-xs-6">
+                      <%= f.input :project_name, placeholder: 'Project Name', label: false %>
+                    </div>
+                    <div class="form-group col-xs-6">  
+                      <%= f.input :org_name, placeholder: 'Organization Name', label: false %>
+                    </div>  
+                  </div>  
+
+                    <%= f.submit 'Start Your Demo', class: 'btn btn-raised btn-success' %>
+                <% end %>
+
+            </div>
+            
+          </div>
+         </div> 
+      </div>
+
+   </div>
+
+ 
