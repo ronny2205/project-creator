@@ -21,9 +21,16 @@ body {
   margin-top: -8px;
 }
 
+.field_with_errors1{
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
 .field_with_errors {
   color: #ff3333;
   background-color: #FFEEEE;
   border-radius: 3px;
-  padding:8px;
+  padding: 8px;
+
 }

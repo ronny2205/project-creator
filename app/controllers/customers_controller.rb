@@ -4,11 +4,12 @@ class CustomersController < ApplicationController
   end  
 
   def create
-    @customer = Customer.create(customer_params)
+    @customer = Customer.new(customer_params)
     if @customer.valid?
-        redirect_to confirmation_path
+      @customer.save
+      redirect_to confirmation_path
     else
-        render :new, :status => :unprocessable_entity
+      render :new, :status => :unprocessable_entity
     end
   end
 
