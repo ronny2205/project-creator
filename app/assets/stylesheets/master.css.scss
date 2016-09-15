@@ -1,5 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@-ms-viewport{
+  width: device-width;
+}
 
 body {
   background-color: #aed581;
