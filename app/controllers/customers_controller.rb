@@ -6,10 +6,13 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.create(customer_params)
     if @customer.valid?
-        redirect_to root_path
+        redirect_to confirmation_path
     else
         render :new, :status => :unprocessable_entity
     end
+  end
+
+  def confirmation
   end
 
   private

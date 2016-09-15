@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'customers#new'
   get '/customers/', to: 'customers#new'
   resources :customers, :only => [:create]
+  get 'confirmation', to: 'customers#confirmation'
 end
