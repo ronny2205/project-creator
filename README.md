@@ -1,24 +1,38 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+This is a Ruby on Rails application that allows potential customers to create a free demo project by completing a form.
+I decided to use Ruby on Rails because I'm familiar with the framework and it makes it easy to quickly build a web app.
 
-* Ruby version
+The app uses the Postgresql database, which I frequently use.
 
-* System dependencies
+I used the ‘simple_form’ ruby gem to build the form. It’s easy to use and makes the code a bit more readable than using the rails form helpers.
 
-* Configuration
+The styling uses Bootstrap. I selected this because it's one of the most common css frameworks.
 
-* Database creation
+To set up the HTTP server, I created a single controller to keep things simple. 
+This "CustomersController" includes 3 actions:
+"new" - displays the form 
+"create" - performs server side validations and then creates a database record for the new project
+"confirmation" - displays project creation confirmation
 
-* Database initialization
+I created the "Customer" model with the fields included in the form.
 
-* How to run the test suite
+There are two html.erb files, one for the form ("new.html.erb") and one for the confirmation ("confirmation.html.erb).
 
-* Services (job queues, cache servers, search engines, etc.)
+I used rails validations to check that all fields are required, that passwords are at least 6 characters, and that the email is in a valid format. I also built a custom validation (in the "Customer" model) to check whether the email address is already in the database.
 
-* Deployment instructions
+Ideally the form would have more validations such as: 
+Length limit on fields, handling spaces and special charcaters, etc.
 
-* ...
+The app is deployed at:
+https://project-creator-ronny.herokuapp.com/
+
+Time breakdown:
+Planning - half an hour
+Building the back-end (controller, model, validations…) - 2 hours
+Building the front-end (views, form, styling) - 2 hours
+Documenting - half an hour
+
+
+
