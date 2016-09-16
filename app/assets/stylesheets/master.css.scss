@@ -20,15 +20,23 @@ body {
   margin-top: 30px; 
 }
 
+.voffset3 {
+  margin-top: 45px; 
+}
+
 #title {
   margin-top: -8px;
 }
 
+#success-title {
+  color: #43a047; 
+  font-size: 40px;
+}
 
 .field_with_errors {
   color: #bf360c;
   font-size: 12px;
-  margin-bottom: -30px;
+  margin-bottom: -21px;
 }
 
 .error {
@@ -36,5 +44,5 @@ body {
 }
 
 .form-group {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
