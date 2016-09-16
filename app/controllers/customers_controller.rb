@@ -7,13 +7,14 @@ class CustomersController < ApplicationController
     @customer = Customer.new(customer_params)
     if @customer.valid?
       @customer.save
-      redirect_to confirmation_path
+      redirect_to confirmation_path(submitted: 'yes')
     else
       render :new, :status => :unprocessable_entity
     end
   end
 
-  def confirmation
+  def confirmation    
+    return redirect_to root_path unless params[:submitted] == 'yes'
   end
 
   private
